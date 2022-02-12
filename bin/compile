@@ -44,7 +44,7 @@ export DEBOOTSTRAP_DIR=$CACHE_DIR/.tools/debootstrap/usr/share/debootstrap
 echo "-----> Fetching and Installing debootstrap"
 cd $DEBOOTSTRAP_BUILD
 wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/debootstrap/1.0.59/debootstrap_1.0.59.tar.xz >/dev/null 2>&1
-tar jxvf debootstrap_1.0.59.tar.xz >/dev/null
+tar xvf debootstrap_1.0.59.tar.xz >/dev/null
 cd debootstrap-1.0.59
 DESTDIR=$CACHE_DIR/.tools/debootstrap fakeroot make >/dev/null
 DESTDIR=$CACHE_DIR/.tools/debootstrap fakeroot make install >/dev/null
